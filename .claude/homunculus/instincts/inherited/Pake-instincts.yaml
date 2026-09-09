@@ -1,0 +1,323 @@
+# Instincts generated from https://github.com/SpiralCloudOmega/Pake
+# Generated: 2026-06-10T19:52:28.881Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Pake-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SpiralCloudOmega/Pake
+---
+
+# Pake Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore, fix
+
+## Evidence
+
+- 3 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore: update contributors [skip ci], fix: allow dots in desktop app names
+
+---
+id: Pake-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SpiralCloudOmega/Pake
+---
+
+# Pake Commit Length
+
+## Action
+
+Keep commit messages concise (~34 characters)
+
+## Evidence
+
+- Average commit message length: 34 chars
+- Based on 3 commits
+
+---
+id: Pake-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SpiralCloudOmega/Pake
+---
+
+# Pake Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: Pake-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SpiralCloudOmega/Pake
+---
+
+# Pake Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: Pake-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SpiralCloudOmega/Pake
+---
+
+# Pake Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: Pake-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/SpiralCloudOmega/Pake
+---
+
+# Pake Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: pake-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files
+- TypeScript code style analysis
+
+---
+id: pake-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Function Naming
+
+## Action
+
+Use camelCase for the function name
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- TypeScript code style analysis
+
+---
+id: pake-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Class Naming
+
+## Action
+
+Use PascalCase for the class name
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- TypeScript code style analysis
+
+---
+id: pake-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for the constant name
+
+## Evidence
+
+- Pattern in namingConventions.constants
+- TypeScript code style analysis
+
+---
+id: pake-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Import Style
+
+## Action
+
+Use alias-based imports rather than relative paths
+
+## Evidence
+
+- Pattern in importStyle: alias
+
+---
+id: pake-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Export Style
+
+## Action
+
+Use either named or default exports as appropriate (mixed style)
+
+## Evidence
+
+- Pattern in exportStyle: mixed
+
+---
+id: pake-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Test Location
+
+## Action
+
+Place test files in the separate 'tests' folder
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+- Presence of 'tests' folder
+
+---
+id: pake-instinct-commit-format-chore
+trigger: "When making a maintenance or tooling update"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Commit Format Chore
+
+## Action
+
+Prefix the commit message with 'chore:'
+
+## Evidence
+
+- Seen in commit 'chore: update contributors [skip ci]'
+- Seen in commit 'chore: bump version to V3.11.8'
+
+---
+id: pake-instinct-commit-format-fix
+trigger: "When fixing a bug"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Commit Format Fix
+
+## Action
+
+Prefix the commit message with 'fix:'
+
+## Evidence
+
+- Seen in commit 'fix: allow dots in desktop app names'
+
+---
+id: pake-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: SpiralCloudOmega/Pake
+---
+
+# Pake Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 34 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 34
+

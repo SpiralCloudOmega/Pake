@@ -1,0 +1,6 @@
+interface:
+  display_name: "Pake"
+  short_description: "Repo-specific patterns and workflows for Pake"
+  default_prompt: "Use the Pake repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
